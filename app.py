@@ -4,6 +4,7 @@ from werkzeug.exceptions import HTTPException
 from views.login import login
 from views.index import index
 from views.detail import detail
+from views.detail import detail_api
 
 app = Flask(__name__, static_url_path = "", static_folder = "static", template_folder = "templates")
 
@@ -27,6 +28,7 @@ if __name__ == "__main__":
     app.register_blueprint(login.bp)
     app.register_blueprint(index.bp)
     app.register_blueprint(detail.bp)
+    app.register_blueprint(detail_api.bp)
 
     app.config["SAVE_DIR_PATH"] = "/home/universe/Desktop/git/proxify/logs/"
 
