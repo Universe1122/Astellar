@@ -9,6 +9,27 @@ def subdomain():
     if target == None:
         abort(400, description = "Parameter 'target' must be needed.")
 
+    
     ## TODO
     ## subdomain 목록 가져오기
-    return "1"
+    return {
+        "result" : [
+            {
+                "site" : "test.com",
+                "status_code" : 200
+            },
+            {
+                "site" : "test.com",
+                "status_code" : 200
+            },
+            {
+                "site" : "test.com",
+                "status_code" : 200
+            },
+            {
+                "site" : "test.com",
+                "status_code" : 200
+            },
+
+        ]
+    }
